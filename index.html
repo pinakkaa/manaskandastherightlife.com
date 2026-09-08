@@ -349,7 +349,8 @@
           <div class="slide-card"><img src="./Image/Amenities/landscapedgarden.webp" alt="kidsplayarea">
             <div class="slide-card__label">Kidsplayarea</div>
           </div>
-          <div class="slide-card"><img src="./Image/Amenities/multipurposesportscourt.webp" alt="Multipur Posesports Court">
+          <div class="slide-card"><img src="./Image/Amenities/multipurposesportscourt.webp"
+              alt="Multipur Posesports Court">
             <div class="slide-card__label">Multipur Posesports Court</div>
           </div>
           <div class="slide-card"><img src="./Image/Amenities/outdoorworkpod.webp" alt="Outdoor Workpod">
@@ -683,10 +684,12 @@
         <h4>Quick Links</h4>
 
         <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
         <a href="#lifestyle">Lifestyle</a>
         <a href="#amenities">Amenities</a>
+        <a href="#masterplan">Masterplan</a>
+        <a href="#floorplan">Floor Plan</a>
         <a href="#connectivity">Connectivity</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -828,25 +831,26 @@
   </footer>
 
   <div class="modal-overlay" id="contact-modal" onclick="if(event.target===this) closeContactModal()">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeContactModal()" aria-label="Close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 6L6 18M6 6l12 12" />
-      </svg>
-    </button>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
 
-    <h3>Get in Touch</h3>
-    <p class="modal-sub">Fill out the form below and our team will get back to you shortly.</p>
+      <h3>Get in Touch</h3>
+      <p class="modal-sub">Fill out the form below and our team will get back to you shortly.</p>
 
-    <form class="modal-form" onsubmit="event.preventDefault(); closeContactModal();">
-      <input type="text" placeholder="Full Name *" required>
-      <input type="email" placeholder="Email Address *" required>
-      <input type="tel" class="full" placeholder="10-Digit Mobile Number *" pattern="[0-9]{10}" required>
-      <textarea class="full" placeholder="Your message..."></textarea>
-      <button type="submit" class="modal-submit">Submit Inquiry</button>
-    </form>
+      <form class="modal-form" onsubmit="event.preventDefault(); closeContactModal();">
+        <input type="text" placeholder="Full Name *" required>
+        <input type="email" placeholder="Email Address *" required>
+        <input type="tel" class="full" placeholder="10-Digit Mobile Number *" pattern="[0-9]{10}" required>
+        <textarea class="full" placeholder="Your message..."></textarea>
+        <button type="submit" class="modal-submit">Submit Inquiry</button>
+      </form>
+    </div>
   </div>
-</div>
 
   <script src="./script.js"></script>
 </body>

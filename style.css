@@ -1307,7 +1307,9 @@ body {
   color: var(--text-main);
   background: var(--white);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 img {
   max-width: 100%;
   display: block;
