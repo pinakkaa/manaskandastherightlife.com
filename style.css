@@ -1,9 +1,11 @@
 /* ================= VARIABLES ================= */
 :root {
-  --green-dark: #0f3b32;
-  --green: #17594a;
-  --green-light: #e5efe9;
-  --gold: #c9a24b;
+  /* --green-dark: #0f3b32; */
+  --green-dark: #004086 ;
+  /* --green: #17594a; */
+  --green: #e8634b ;
+  --green-light: #e8634b ;
+  --gold: #e8634b;
   --text-light: #ffffff;
   --text-muted: #6b7b76;
   --font: "Segoe UI", Arial, sans-serif;
@@ -19,6 +21,7 @@ body {
   font-family: var(--font);
   color: #1c1c1c;
   line-height: 1.5;
+  background: #f4dcbe;
 }
 
 img {
@@ -581,10 +584,10 @@ a {
 }
 /* ============ index.html <-> style.css split point: put everything below in style.css ============ */
 :root {
-  --dark: #14312b; /* icon circles / dark headings / buttons */
-  --dark-2: #0f2622;
-  --green: #1f9d5a; /* accent green */
-  --text-main: #12241f;
+  --dark: #004086; /* icon circles / dark headings / buttons */
+  --dark-2: #004086;
+  --green: #e8634b ; /* accent green */
+  --text-main: #004086;
   --text-body: #5c6b68;
   --bg-light: #f6f8f7;
   --white: #ffffff;
@@ -616,9 +619,6 @@ img {
   padding: 0 24px;
 }
 
-.section {
-  padding: 72px 0;
-}
 
 .section--light {
   background: var(--bg-light);
@@ -973,6 +973,7 @@ img {
   font-weight: 800;
   margin: 0 0 16px;
   line-height: 1.25;
+  color: #004086;
 }
 .about-copy h2 .accent {
   color: var(--green);
@@ -1095,10 +1096,10 @@ img {
 }
 /* ============ index.html <-> style.css split point: put everything below in style.css ============ */
 :root {
-  --dark: #14312b;
-  --dark-2: #0f2622;
-  --green: #1f9d5a;
-  --text-main: #12241f;
+  --dark: #004086;
+  --dark-2: #004086;
+  --green: #e8634b ;
+  --text-main: #004086;
   --text-body: #5c6b68;
   --bg-light: #f6f8f7;
   --white: #ffffff;
@@ -1130,9 +1131,6 @@ img {
   padding: 0 24px;
 }
 
-.section {
-  padding: 72px 0;
-}
 .section--light {
   background: var(--bg-light);
 }
@@ -1265,7 +1263,7 @@ img {
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem 0;
 }
 .slider-track::-webkit-scrollbar {
   display: none;
@@ -1405,10 +1403,10 @@ img {
 
 /* ============ index.html <-> style.css split point: put everything below in style.css ============ */
 :root {
-  --dark: #14312b;
-  --dark-2: #0f2622;
-  --green: #1f9d5a;
-  --text-main: #12241f;
+  --dark: #004086;
+  --dark-2: #004086;
+  --green: #e8634b ;
+  --text-main: #004086;
   --text-body: #5c6b68;
   --bg-light: #f6f8f7;
   --white: #ffffff;
@@ -1443,7 +1441,7 @@ img {
 }
 
 .section {
-  padding: 72px 0;
+  padding: 52px 0;
 }
 .section--light {
   background: var(--bg-light);

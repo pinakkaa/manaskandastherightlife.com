@@ -154,21 +154,21 @@ gsap.from(".masterplan-legend li", {
 });
 
 /* ---------- 7. Sliders (amenities + gallery) — cards fan in the first time they're seen ---------- */
-gsap.utils.toArray(".slider-track, .psl-track").forEach((trackEl) => {
-  const cards = trackEl.children;
-  gsap.from(cards, {
-    opacity: 0,
-    y: 30,
-    scale: 0.95,
-    duration: 0.6,
-    ease: "power2.out",
-    stagger: 0.08,
-    scrollTrigger: {
-      trigger: trackEl,
-      start: "top 85%",
-    },
-  });
-});
+// gsap.utils.toArray(".slider-track, .psl-track").forEach((trackEl) => {
+//   const cards = trackEl.children;
+//   gsap.from(cards, {
+//     opacity: 0,
+//     y: 30,
+//     scale: 0.95,
+//     duration: 0.6,
+//     ease: "power2.out",
+//     stagger: 0.08,
+//     scrollTrigger: {
+//       trigger: trackEl,
+//       start: "top 85%",
+//     },
+//   });
+// });
 
 /* ---------- 8. Location Advantages — map + accordion ---------- */
 gsap.from(".loc-map", {
