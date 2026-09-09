@@ -270,6 +270,21 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   var heroNextBtn = document.getElementById("heroNext");
 
   if (heroSlider) {
+  var heroSlideEls = heroSlider.querySelectorAll(".hero-slide");
+
+  function setHeroSlideImages() {
+    var isMobile = window.innerWidth <= 700; // adjust breakpoint if needed
+    heroSlideEls.forEach(function (slide) {
+      var url = isMobile ? slide.dataset.mobile : slide.dataset.desktop;
+      slide.style.backgroundImage = "url('" + url + "')";
+    });
+  }
+
+  setHeroSlideImages();
+  window.addEventListener("resize", setHeroSlideImages);
+}
+
+  if (heroSlider) {
     var heroSlides = heroSlider.querySelectorAll(".hero-slide");
     var heroCurrentIndex = 0;
     var heroTotalSlides = heroSlides.length;

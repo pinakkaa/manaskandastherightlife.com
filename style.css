@@ -166,8 +166,7 @@ a {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 560px;
+  height: calc(100vh - 91px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -181,11 +180,12 @@ a {
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-color: #2a3a35;
   opacity: 0;
   transition: opacity 1s ease;
+  background-repeat: no-repeat;
 }
 
 .hero-slide.active {
@@ -195,12 +195,12 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(10, 20, 17, 0.75) 0%,
     rgba(10, 20, 17, 0.35) 55%,
     rgba(10, 20, 17, 0.15) 100%
-  );
+  ); */
 }
 
 .hero-content {
@@ -507,16 +507,27 @@ a {
     background: var(--green-dark);
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 40px;
     gap: 16px;
     max-height: 0;
+    height: 0;
+    padding: 0 40px;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease,
+      padding 0.3s ease;
   }
 
   .nav-links.open {
     max-height: 400px;
-    padding-bottom: 20px;
+    height: auto;
+    padding: 20px 40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .hamburger {
@@ -1875,4 +1886,36 @@ img {
 }
 .flex {
   display: flex !important;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-links-horizontal {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .footer-links-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+  .hero {
+    height: 60vh;
+  }
+  .hero-slide {
+    background-size: cover;
+  }
 }
