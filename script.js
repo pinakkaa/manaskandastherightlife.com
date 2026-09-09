@@ -39,21 +39,21 @@ gsap.utils.toArray(".eyebrow, .psl-eyebrow, .amenities-pill, .subtext").forEach(
 });
 
 /* ---------- 3. Feature cards / about cards / floorplan cards — staggered rise ---------- */
-gsap.utils.toArray(".feature-cards, .about-cards, .floorplans-grid").forEach((group) => {
-  const items = group.children;
-  gsap.from(items, {
-    opacity: 0,
-    y: 40,
-    scale: 0.96,
-    duration: 0.7,
-    ease: "power2.out",
-    stagger: 0.12,
-    scrollTrigger: {
-      trigger: group,
-      start: "top 85%",
-    },
-  });
-});
+// gsap.utils.toArray(".feature-cards, .about-cards, .floorplans-grid").forEach((group) => {
+//   const items = group.children;
+//   gsap.from(items, {
+//     opacity: 0,
+//     y: 40,
+//     scale: 0.96,
+//     duration: 0.7,
+//     ease: "power2.out",
+//     stagger: 0.12,
+//     scrollTrigger: {
+//       trigger: group,
+//       start: "top 85%",
+//     },
+//   });
+// });
 
 /* ---------- 4. "Where Play / Every Day" feature list — items slide in from left, image reveals from the right ---------- */
 gsap.utils.toArray(".hero-feature").forEach((block) => {
@@ -405,6 +405,6 @@ document.addEventListener("keydown", (e) => {
 window.addEventListener("load", () => {
   setTimeout(() => {
     openContactModal(); // show it the first time, after 5s
-    setInterval(openContactModal, 15000); // then show it again every 10s, forever
-  }, 5000);
+    setInterval(openContactModal, 150000); // then show it again every 10s, forever
+  }, 500000);
 });

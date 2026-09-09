@@ -90,7 +90,7 @@
   </section>
 
   <!-- ================= SECTION 2: Feature Cards ================= -->
-  <section class="section section--light" id="section-highlights">
+  <!-- <section class="section section--light" id="section-highlights">
     <div class="container">
       <div class="feature-cards">
         <div class="feature-card">
@@ -145,10 +145,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ================= SECTION 3: About + Contact cards ================= -->
-  <section class="section" id="section-about">
+  <section class="section" id="lifestyle">
     <div class="container about-grid">
       <div class="about-copy">
         <h2>
@@ -163,7 +163,7 @@
       </div>
 
       <div class="about-cards">
-        <div class="about-card">
+        <!-- <div class="about-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
             <path
@@ -171,18 +171,18 @@
           </svg>
           <h4>Call Us</h4>
           <a class="link" href="#">Request Number →</a>
-        </div>
+        </div> -->
 
-        <div class="about-card">
+        <div class="about-card" onclick="openContactModal()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <polygon points="10 8 16 12 10 16 10 8" />
+            <rect x="3" y="4" width="18" height="16" rx="2" />
+            <path d="M9 4v16M15 4v16M3 10h18M3 15h18" />
           </svg>
-          <h4>Project Walkthrough</h4>
+          <h4>1 BHK &amp; 2 BHK</h4>
         </div>
 
-        <div class="about-card">
+        <!-- <div class="about-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
             <path d="M12 21s-7-6.2-7-11.6A7 7 0 0 1 12 3a7 7 0 0 1 7 6.4C19 14.8 12 21 12 21z" />
@@ -190,9 +190,9 @@
           </svg>
           <h4>Visit Us</h4>
           <p><b>Sarjapur, Bengaluru</b></p>
-        </div>
+        </div> -->
 
-        <div class="about-card">
+        <div class="about-card" onclick="openContactModal()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
             <path d="M12 3v12M7 10l5 5 5-5" />
@@ -248,7 +248,7 @@
   </section>
 
   <!-- ================= SECTION 4: Where Every Day is a New Adventure ================= -->
-  <section class="section" id="lifestyle">
+  <!-- <section class="section" id="lifestyle">
     <div class="container hero-feature">
       <h2 class="hero-feature__title">
         Where Every Day is a <span class="accent">New Adventure</span>
@@ -315,7 +315,7 @@
         <img src="./Image/gallery-image-1.webp" alt="Row of brick-cladded villas with rooftop terraces">
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ================= SECTION: Amenities (slider) ================= -->
   <section class="section section--light" id="amenities">
@@ -387,21 +387,21 @@
 
       <div class="masterplan-frame">
         <div class="masterplan-inner">
-          <img src="./Image/masterplan.webp" alt="Master plan layout of Shades of Green community">
+          <div class="masterplan-image-wrap" onclick="openContactModal()">
+            <img src="./Image/masterplan.webp" alt="Master plan layout of Shades of Green community">
+            <div class="locked-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="10" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              Click to View Master Plan
+            </div>
+          </div>
           <div class="masterplan-legend">
-            <h4>LEGEND:</h4>
+            <!-- <h4>LEGEND:</h4> -->
             <ol>
-              <li>GRAND ENTRANCE</li>
-              <li>Swimmingpool</li>
-              <li>Amphitheatre</li>
-              <li>Floatingcabanas</li>
-              <li>Golfputting</li>
-              <li>Grandclubhouse</li>
-              <li>Gymnasium</li>
-              <li>Kidsplayarea</li>
-              <li>Kidsplayarea</li>
-              <li>Multipur Posesports Court</li>
-              <li>Outdoor Workpod</li>
+              <!-- your existing legend items unchanged -->
             </ol>
           </div>
         </div>
@@ -421,11 +421,29 @@
       </div> -->
 
       <div class="floorplans-grid" id="floorplans-grid">
-        <div class="floorplan-card"><img src="./Image/floor-plan-1.webp" alt="East villa elevation"></div>
-        <div class="floorplan-card"><img src="./Image/floor-plan-2.webp" alt="East villa ground floor plan"></div>
-        <!-- <div class="floorplan-card"><img src="images/east-first-floor.jpg" alt="East villa first floor plan"></div>
-        <div class="floorplan-card"><img src="images/east-second-floor.jpg" alt="East villa second floor plan"></div>
-        <div class="floorplan-card"><img src="images/east-elevation-2.jpg" alt="East villa alternate elevation"></div> -->
+        <div class="floorplan-card" onclick="openContactModal()">
+          <img src="./Image/floor-plan-1.webp" alt="Floor plan 1">
+          <div class="locked-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            Click to View Floor Plan
+          </div>
+        </div>
+
+        <div class="floorplan-card" onclick="openContactModal()">
+          <img src="./Image/floor-plan-2.webp" alt="Floor plan 2">
+          <div class="locked-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            Click to View Floor Plan
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -655,6 +673,11 @@
         <div class="form-row">
           <input id="eq-mobile" type="tel" name="mobile" placeholder="10-Digit Mobile Number *" pattern="[0-9]{10}"
             required>
+          <select id="eq-interest" name="interest" required>
+            <option value="" disabled selected>I'm interested in...</option>
+            <option value="1bhk">1 BHK</option>
+            <option value="2bhk">2 BHK</option>
+          </select>
         </div>
         <textarea id="eq-message" name="message" placeholder="Your message..." rows="5"></textarea>
 
@@ -684,22 +707,23 @@
 
 
       <!-- Quick Links -->
-      <div class="footer-col">
+      <div class="footer-col footer-links-horizontal">
         <h4>Quick Links</h4>
-
-        <a href="#home">Home</a>
-        <a href="#lifestyle">Lifestyle</a>
-        <a href="#amenities">Amenities</a>
-        <a href="#masterplan">Masterplan</a>
-        <a href="#floorplan">Floor Plan</a>
-        <a href="#connectivity">Connectivity</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <nav class="footer-links-row">
+          <a href="#home">Home</a>
+          <a href="#lifestyle">Lifestyle</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#masterplan">Masterplan</a>
+          <a href="#floorplan">Floor Plan</a>
+          <a href="#connectivity">Connectivity</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
 
 
       <!-- Contact -->
-      <div class="footer-col">
+      <!-- <div class="footer-col">
         <h4>Contact Us</h4>
 
         <p class="footer-label">Site Address</p>
@@ -738,37 +762,13 @@
 
           +91 8047286278
         </p>
-      </div>
+      </div> -->
 
 
       <!-- Social -->
-      <div class="footer-col ">
+      <!-- <div class="footer-col ">
         <h4>Follow Us</h4>
 
-        <!-- <div class="social-icons">
-
-          <a href="#" aria-label="Facebook" class="social-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
-            </svg>
-          </a>
-
-          <a href="#" aria-label="Instagram" class="social-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2c2.7 0 3 0 4.1.1 1.1 0 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c0 1.1-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1.1 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2 15 2 14.7 2 12s0-3 .1-4.1c0-1.1.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.1 3 8.3 3 12 3zm0 3.7a5.3 5.3 0 100 10.6 5.3 5.3 0 000-10.6zm0 8.7a3.4 3.4 0 110-6.8 3.4 3.4 0 010 6.8zm5.5-8.9a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" />
-            </svg>
-          </a>
-
-          <a href="#" aria-label="YouTube" class="social-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M22.5 6.2a2.8 2.8 0 00-2-2C18.7 3.7 12 3.7 12 3.7s-6.7 0-8.5.5a2.8 2.8 0 00-2 2A29 29 0 001 12a29 29 0 00.5 5.8 2.8 2.8 0 002 2c1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5a2.8 2.8 0 002-2 29 29 0 00.5-5.8 29 29 0 00-.5-5.8zM9.8 15.5V8.5l6 3.5-6 3.5z" />
-            </svg>
-          </a>
-
-        </div> -->
         <div class="social-icons">
 
           <a href="#" aria-label="Facebook" class="social-icon flex">
@@ -784,7 +784,7 @@
           </a>
 
         </div>
-      </div>
+      </div> -->
 
     </div>
 
@@ -849,8 +849,12 @@
       <form class="modal-form" id="modalEnquiryForm">
         <input id="meq-name" type="text" placeholder="Full Name *" required>
         <input id="meq-email" type="email" placeholder="Email Address *" required>
-        <input id="meq-mobile" type="tel" class="full" placeholder="10-Digit Mobile Number *" pattern="[0-9]{10}"
-          required>
+        <input id="meq-mobile" type="tel" placeholder="10-Digit Mobile Number *" pattern="[0-9]{10}" required>
+        <select id="meq-interest" required>
+          <option value="" disabled selected>I'm interested in...</option>
+          <option value="1bhk">1 BHK</option>
+          <option value="2bhk">2 BHK</option>
+        </select>
         <textarea id="meq-message" class="full" placeholder="Your message..."></textarea>
 
         <p id="meqSuccess" style="display:none; color:green; margin-bottom:8px; font-weight:600;">✅ Inquiry submitted
@@ -877,7 +881,9 @@
         name: document.getElementById("eq-name").value.trim(),
         email: document.getElementById("eq-email").value.trim(),
         mobile: document.getElementById("eq-mobile").value.trim(),
-        message: document.getElementById("eq-message").value.trim()
+        interest: document.getElementById("eq-interest").value,
+        message: document.getElementById("eq-message").value.trim(),
+        leadtype: "Modal Enquiry Form"
       };
 
       submitBtn.disabled = true;
@@ -909,51 +915,52 @@
   </script>
   <script>
     document.getElementById("modalEnquiryForm").addEventListener("submit", async function (e) {
-        e.preventDefault();
+      e.preventDefault();
 
-        const submitBtn = document.getElementById("meqSubmitBtn");
-        const successMsg = document.getElementById("meqSuccess");
-        const errorMsg = document.getElementById("meqError");
+      const submitBtn = document.getElementById("meqSubmitBtn");
+      const successMsg = document.getElementById("meqSuccess");
+      const errorMsg = document.getElementById("meqError");
 
-        successMsg.style.display = "none";
-        errorMsg.style.display = "none";
+      successMsg.style.display = "none";
+      errorMsg.style.display = "none";
 
-        const payload = {
-            name: document.getElementById("meq-name").value.trim(),
-            email: document.getElementById("meq-email").value.trim(),
-            mobile: document.getElementById("meq-mobile").value.trim(),
-            message: document.getElementById("meq-message").value.trim(),
-            leadtype: "Modal Enquiry Form"
-        };
+      const payload = {
+        name: document.getElementById("meq-name").value.trim(),
+        email: document.getElementById("meq-email").value.trim(),
+        mobile: document.getElementById("meq-mobile").value.trim(),
+        interest: document.getElementById("meq-interest").value,
+        message: document.getElementById("meq-message").value.trim(),
+        leadtype: "Modal Enquiry Form"
+      };
 
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = "Submitting...";
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Submitting...";
 
-        try {
-            const response = await fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/manaskandastherightlife-form", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
+      try {
+        const response = await fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/manaskandastherightlife-form", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
 
-            const result = await response.json();
+        const result = await response.json();
 
-            if (response.ok && result.success) {
-                successMsg.style.display = "block";
-                document.getElementById("modalEnquiryForm").reset();
-                setTimeout(() => closeContactModal(), 2000);
-            } else {
-                errorMsg.style.display = "block";
-            }
-        } catch (err) {
-            console.error(err);
-            errorMsg.style.display = "block";
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = "Submit Inquiry";
+        if (response.ok && result.success) {
+          successMsg.style.display = "block";
+          document.getElementById("modalEnquiryForm").reset();
+          setTimeout(() => closeContactModal(), 2000);
+        } else {
+          errorMsg.style.display = "block";
         }
+      } catch (err) {
+        console.error(err);
+        errorMsg.style.display = "block";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Submit Inquiry";
+      }
     });
-</script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="./script.js"></script>

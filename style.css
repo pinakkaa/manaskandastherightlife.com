@@ -387,11 +387,22 @@ a {
 
 .footer-top {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-between; */
 }
-
+.footer-links-horizontal {
+  flex: 1 1 auto;
+}
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-links-row a {
+  display: inline-block;
+  margin-bottom: 0; /* overrides the old vertical spacing */
+}
 .footer-col {
   flex: 1 1 220px;
 }
@@ -549,6 +560,12 @@ a {
   }
   .form-row {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-links-row {
+    gap: 14px 20px;
   }
 }
 /* ============ index.html <-> style.css split point: put everything below in style.css ============ */
@@ -767,6 +784,39 @@ img {
   color: var(--text-body);
   line-height: 1.7;
 }
+.masterplan-image-wrap {
+  position: relative;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 560px;
+}
+.masterplan-image-wrap img {
+  filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+.masterplan-image-wrap:hover img {
+  transform: scale(1.04);
+}
+.masterplan-image-wrap .locked-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 49, 43, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  padding: 20px;
+}
+.masterplan-image-wrap .locked-overlay svg {
+  width: 28px;
+  height: 28px;
+}
 
 /* ================= SECTION 3: Floor Plans ================= */
 .floorplans-toggle {
@@ -791,6 +841,7 @@ img {
   background: transparent;
   color: var(--green);
 }
+
 .toggle-btn.active {
   background: var(--green);
   color: var(--white);
@@ -801,21 +852,21 @@ img {
 }
 
 .floorplans-grid {
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
-  gap: 3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .floorplan-card {
+  position: relative;
+  flex: 1 1 320px;
+  max-width: 420px;
   border-radius: var(--radius);
   overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  cursor: pointer;
 }
 .floorplan-card:hover {
   transform: translateY(-4px) scale(1.02);
@@ -823,8 +874,33 @@ img {
 }
 .floorplan-card img {
   width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: blur(8px);
+  transition: transform 0.3s ease;
 }
-
+.floorplan-card:hover img {
+  transform: scale(1.04);
+}
+.floorplan-card .locked-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 49, 43, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  padding: 20px;
+}
+.floorplan-card .locked-overlay svg {
+  width: 28px;
+  height: 28px;
+}
 /* ================= SECTION 4: Feature Cards ================= */
 .feature-cards {
   display: grid;
@@ -899,13 +975,47 @@ img {
   margin: 0 0 16px;
 }
 
+/* .about-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+} */
 .about-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .about-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
   background: var(--white);
   border-radius: var(--radius);
   padding: 28px 20px;
@@ -1144,7 +1254,7 @@ img {
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding-bottom: 4px;
+  padding-bottom: 3rem;
 }
 .slider-track::-webkit-scrollbar {
   display: none;
@@ -1307,7 +1417,7 @@ body {
   color: var(--text-main);
   background: var(--white);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 img {
@@ -1383,6 +1493,7 @@ img {
   cursor: pointer;
   user-select: none;
   transition: background 0.18s ease;
+  border-radius: 6px;
 }
 .loc-accordion-header:hover {
   background: var(--dark-2);
@@ -1465,7 +1576,7 @@ img {
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding-bottom: 4px;
+  padding-bottom: 3rem;
 }
 .psl-track::-webkit-scrollbar {
   display: none;
@@ -1762,6 +1873,6 @@ img {
   color: #0e3b33;
   transform: translateY(-3px);
 }
-.flex{
+.flex {
   display: flex !important;
 }
