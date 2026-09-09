@@ -183,9 +183,9 @@ a {
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  background-color: #2a3a35;
+  background-color: #004086;
   opacity: 0;
   transition: opacity 1s ease;
   background-repeat: no-repeat;
