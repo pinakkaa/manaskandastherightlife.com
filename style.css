@@ -1153,7 +1153,7 @@ img {
 }
 .heading .accent {
   color: var(--green);
-  display: block;
+  /* display: block; */
 }
 
 .subtext {
@@ -1916,4 +1916,12 @@ body {
   .hero-slide {
     background-size: cover;
   }
+}
+
+
+.about-card-price{
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-body);
 }
